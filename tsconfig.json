@@ -1,6 +1,4 @@
 {
-  "files": ["src/auto-imports.d.ts"],
-  
   "references": [
     {
       "path": "./tsconfig.node.json"
