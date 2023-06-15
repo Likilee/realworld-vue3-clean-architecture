@@ -12,7 +12,8 @@ describe('updateProfile', () => {
         avatarUrl: '아바타',
         bio: '바이오'
       },
-      followers: []
+      followings: [],
+      favorites: []
     }
     const newProfile: UserProfile = {
       avatarUrl: '새로운 아바타',
@@ -34,12 +35,13 @@ describe('followOtherUser', () => {
         avatarUrl: '아바타',
         bio: '바이오'
       },
-      followers: []
+      followings: [],
+      favorites: []
     }
 
     const updatedUser = followOtherUser(user, 'user2')
-    expect(updatedUser.followers.length).toBe(1)
-    expect(updatedUser.followers[0]).toBe('user2')
+    expect(updatedUser.followings.length).toBe(1)
+    expect(updatedUser.followings[0]).toBe('user2')
   })
 })
 
@@ -53,9 +55,10 @@ describe('unfollowOtherUser', () => {
         avatarUrl: '아바타',
         bio: '바이오'
       },
-      followers: ['user2']
+      followings: ['user2'],
+      favorites: []
     }
     const updatedUser = unfollowOtherUser(user, 'user2')
-    expect(updatedUser.followers.length).toBe(0)
+    expect(updatedUser.followings.length).toBe(0)
   })
 })

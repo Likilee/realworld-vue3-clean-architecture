@@ -12,13 +12,13 @@ export const updateProfile = (user: User, newProfile: UserProfile): User => {
 export const followOtherUser = (user: User, otherUserId: UniqueId): User => {
   return {
     ...user,
-    followers: [...user.followers, otherUserId],
+    followings: [...user.followings, otherUserId],
   };
 }
 
 export const unfollowOtherUser = (user: User, otherUserId: UniqueId): User => {
   return {
     ...user,
-    followers: user.followers.filter((follower) => follower !== otherUserId),
+    followings: user.followings.filter((follower) => follower !== otherUserId),
   };
 }

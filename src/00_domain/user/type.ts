@@ -5,7 +5,8 @@ export type User = {
   name: UserName
   email: Email
   profile: UserProfile
-  followers: UniqueId[]
+  followings: UserName[]
+  favorites: UniqueId[]
 }
 
 export type UserName = string
