@@ -8,7 +8,6 @@ export const useUserStorageService: UserStorageService = () => {
     const updateUser = (user: User) => {
       user.value = user
     }
-    hello()
     return { user, updateUser }
   })
 }
