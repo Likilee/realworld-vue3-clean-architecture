@@ -1,4 +1,4 @@
-import { describe, expect, it, test } from 'vitest'
+import { describe, expect, test } from 'vitest'
 import { User, UserProfile } from './type'
 import { followOtherUser, unfollowOtherUser, updateProfile } from './logic'
 
