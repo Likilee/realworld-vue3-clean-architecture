@@ -1,10 +1,18 @@
-import { User } from '@/00_domain/user/type'
+import { User, UserName } from '@/00_domain/user/type'
+import { Email, Password } from '@/shared-kernel'
 
 export interface UserStorageService {
   user?: User
   updateUser(user: User): void
-  // addFollower(userId: UniqueId): void
-  // removeFollower(userId: UniqueId): void
-  // addFavorite(articleId: UniqueId): void
-  // removeFavorite(articleId: UniqueId): void
+}
+
+
+export type SignUpDTO = {
+  name: UserName
+  email: Email
+  password: Password
+}
+export interface AuthService {
+  signUp(data: SignUpDTO): Promise<User>
+  // signIn()
 }

@@ -9,6 +9,8 @@ export type User = {
   favorites: UniqueId[]
 }
 
+export type UserUpdateOptions = Partial<Omit<User, 'id'>>
+
 export type UserName = string
 
 export type UserBio = string

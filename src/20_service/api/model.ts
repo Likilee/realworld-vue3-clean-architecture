@@ -68,3 +68,16 @@ export type Article = {
   favoritesCount: number
   author: Profile
 }
+
+export type GenericErrorModel = {
+  errors: {
+    body: string[]
+  }
+}
+
+export class GenericError extends Error {
+  constructor(errors: GenericErrorModel) {
+    super(errors.errors.body[0])
+    this.name = 'GenericError'
+  }
+}

@@ -5,6 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import AppFooter from './21_ui/AppFooter.vue'
-import AppHeader from './21_ui/AppHeader.vue'
+import AppFooter from './21_ui/components/AppFooter.vue'
+import AppHeader from './21_ui/components/AppHeader.vue'
 </script>
